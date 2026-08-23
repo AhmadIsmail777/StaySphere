@@ -1,0 +1,15 @@
+Index Route 
+
+GET /listings --> all listings
+
+GET /listings/:id (show) --> specific listing data view
+
+
+Update: Edit & Upadate Route 
+
+GET--> /listings/:id/edit--> edit form --> Submit
+PUT--> /listings/:id
+
+
+Delete: Delete Route
+DELETE --> /listings/:id
