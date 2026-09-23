@@ -82,3 +82,57 @@ messages are written to the flash and cleared after displayed to the user.
 
 for better use of flash we use res.local 
 res.local--> use this property to set variables accessible in templates rendered with res.rendered 44
+
+
+Authentication section:
+Authentication
+Authentication is the process of verifying who someone is
+
+Authorization section:
+Authorization
+Authorization is the process of verifying what specific applications, files, and data a user has access to
+
+Storing Passwords
+We Never store the Passwords as it is. We store their hashed form
+
+For every input, there is a fixed output
+They are one-way functions: we can't get input from output(eg modulus and % type of function)
+Output length is fixed for different input data & varying length
+Small changes in input should bring large changes in output.
+eg of hashing function --> SHA256 , MD5 , CRC , becrypt
+pbkdf2 is the hasing algo which used in this project
+
+Salting
+Password salting is a technique to protect passwords 
+stored in databases by adding a string of 32 or more 
+characters and then hashing them.
+
+Passport is a library use to auth in node.js
+(express compatible auth Middleware for Node.js)
+passport-local--> auth using username and password
+passport-local-mongoose--> works best with mongodb
+
+USER Model
+username, password, email
+
+app.use(passport.session());--> A web app needs the ability to identify users as They
+                                browse from page to page. This series of req and res, each 
+                                associated with the same user, is known as a session.
+
+Signup User
+GET /signup 
+POST /signup
+
+req.user --> undefined (not logged in)--> signup , login
+         --> obj (logged in)--> logout    
+
+Login after Signup
+Passport's login method automatically establishes a login session
+We can invoke login to automatically login a user
+
+Authorization--> hide Delete and edit btn from normal users 
+first identify--> 1) listing owner
+                  2) edit/delete user
+
+for reviews--> 1) Reviews --> author / createdby
+               
