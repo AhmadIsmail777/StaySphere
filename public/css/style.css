@@ -121,3 +121,15 @@ body {
   padding-left: 0;
   padding-right: 0;
 }
+
+/* In your CSS stylesheet */
+.img-preview {
+  max-width: 50px !important;
+  height: auto;
+}
+
+/* Map styling */
+#map {
+  height: 400px;
+  width: 80vh;
+}

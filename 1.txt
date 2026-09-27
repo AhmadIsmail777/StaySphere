@@ -136,3 +136,42 @@ first identify--> 1) listing owner
 
 for reviews--> 1) Reviews --> author / createdby
                
+MVC: Model, View , Controller
+its a way of writing a code.
+Implement Design Patterns for Listings 
+Model--> Core functions of the database is stored here
+View--> Core function of the frontend is stored here
+Controller--> Core function of the backend is stored here.
+
+Image Upload 
+problems in our form
+1- we cant send files with our existing files
+2. Size limit in Image Upload
+
+Solution 
+1) make from capable of sending files
+2) we will save our file in a 3rd party service like google drive or aws or azure
+    and the service will save the URL/link of that service 
+3) save this link in mongodb
+
+if we want to send a file then we have to change the endoding type of the files
+enctype="multipart/form-data"
+
+Cloud Setup
+Cloudinary & .env file(enviroment variables/ credentials )
+.env files saves files in KEY=value pair
+
+form(file)-->backend(parse)-->cloud(store)-->URL/link(file)-->now store it to mongodb
+
+
+Geocoading
+Geocoding is the process of converting addresses 
+(like a street address) into geographic coordinates 
+(like latitude and longitude), which you can use to 
+place markers on a map, or position the map.
+two types--> forward and backward
+
+Storing coordinates
+GeoJSON
+
+Mongo Atlas--> Cloud Datbase Services--> Deploy a multi-cloud database.

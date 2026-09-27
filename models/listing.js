@@ -9,9 +9,8 @@ const listingSchema = new Schema({
   },
   description: String,
   image: {
-    type: String,
-    default: "https://trustmaker.in/assets/default-img.jpg",
-    set: (v) => (v === "" ? "https://trustmaker.in/assets/default-img.jpg" : v),
+    url: String,
+    filename: String,
   },
   price: Number,
   location: String,
@@ -25,6 +24,17 @@ const listingSchema = new Schema({
   owner: {
     type: Schema.Types.ObjectId,
     ref: "User",
+  },
+  geometry: {
+    type: {
+      type: String,
+      enum: ["Point"],
+      required: true,
+    },
+    coordinates: {
+      type: [Number],
+      required: true,
+    },
   },
 });
 
